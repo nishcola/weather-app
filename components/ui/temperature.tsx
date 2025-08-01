@@ -11,11 +11,12 @@ import {
   snow,
 } from "@/app/utils/icons";
 import moment from "moment";
+import { Skeleton } from "./skeleton";
 
 function Temperature() {
     const { forecast } = useGlobalContext();
     const { main, timezone, name, weather } = forecast;
-    if(!forecast || !weather) return <div>Loading...</div>;
+    if(!forecast || !weather) return <Skeleton className="pt-6 pb-5 px-4 border rounded-lg flex flex-col justify-between h-full" />
 
     const temp = kelvinToFarenheit(main?.temp);
     const minTemp = kelvinToFarenheit(main?.temp_min);
