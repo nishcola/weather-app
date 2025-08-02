@@ -4,6 +4,7 @@ import Temperature from "@/components/ui/temperature";
 import AirPollution from "@/components/ui/air-pollution";
 import Sunset from "@/components/ui/sunset";
 import Wind from "@/components/ui/wind";
+import DailyForecast from "@/components/ui/daily-forecast";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
             <AirPollution />
             <Sunset />
             <Wind />
+            <DailyForecast />
           </div>
         </div>
       </div>
